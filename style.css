@@ -252,6 +252,9 @@ header {
   border-radius: 1rem;
   max-width: 800px;
   text-align: center;
+  width: 100%; /* Neu hinzufügen */
+  box-sizing: border-box; /* Wichtig für Padding */
+  margin: 0 1rem; /* Abstand zum Rand */
 }
 .white-text h1,
 .white-text p {
@@ -302,4 +305,16 @@ header {
   .footer-column {
     min-width: unset;
   }
+  @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
 }

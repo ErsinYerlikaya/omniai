@@ -1,8 +1,8 @@
 // Menü auf Mobilgeräten umschalten
 function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('show');
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("show");
 }
-
 // Feedback-Daten
 const feedbacks = [
   {
