@@ -11,7 +11,7 @@ const feedbacks = [
     text: 'Omni AI helped us automate critical workflows securely and quickly. Highly recommended!'
   },
   {
-    logo: 'logo2.jpg',
+    logo: 'logo1.jpg',
     name: 'Lisa Schmidt',
     text: 'Die maßgeschneiderten KI-Lösungen haben unsere Effizienz enorm gesteigert.'
   },
