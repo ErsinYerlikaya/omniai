@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* === Reset & Base === */
 * {
   margin: 0;
   padding: 0;
@@ -12,41 +12,78 @@ body {
   padding-bottom: 2rem;
 }
 
-/* Header & Nav */
+/* === Header & Navigation === */
 header {
-  background: white;
-  color: black;
-  padding: 1rem;
+  background: rgba(43, 133, 211, 0.03);
+  padding: 1rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
 }
 .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
 }
 .logo {
   height: 50px;
+  display: block;
 }
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 .nav-links li a {
-  color: black;
   text-decoration: none;
+  color: #000;
   font-weight: 500;
+  position: relative;
+}
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #2b85d3;
+  transition: width 0.3s ease;
+}
+.nav-links li a:hover::after {
+  width: 100%;
 }
 .menu-btn {
   display: none;
-  background: none;
-  border: none;
-  color: black;
-  font-size: 2rem;
 }
 
-/* Sections */
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+/* === Sections === */
 .section-one,
 .section-two,
 .feedback-slider,
@@ -56,7 +93,7 @@ header {
 .section-one {
   display: flex;
   flex-wrap: wrap;
-  padding:  10rem 2rem;
+  padding: 10rem 2rem;
   gap: 2rem;
   align-items: center;
 }
@@ -72,15 +109,16 @@ header {
   font-size: 1.1rem;
   color: #444;
 }
-.side-logo img {
-  max-width: 180px;
-}
 .section-two {
-  padding: 2rem;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+.section-two:first-of-type {
+  margin-top: 0;
 }
 .section-two h1 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-size: 1.8rem;
   color: rgba(43, 133, 211, 0.6);
 }
@@ -121,7 +159,7 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Feedback Slider */
+/* === Feedback Slider === */
 .feedback-slider {
   padding: 4rem 2rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -171,12 +209,35 @@ header {
   color: #2b85d3;
 }
 
-/* Footer */
+/* === Back to Top Button === */
+#backToTop,
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2b85d3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  font-size: 1.5rem;
+}
+#backToTop:hover,
+#scrollTopBtn:hover {
+  background-color: #1a6fb8;
+}
+
+/* === Footer === */
 .site-footer {
-  padding: 3rem 2rem 1rem;
-  border-top: 1px solid #e0e0e0;
+  background: #f9fcfe;
+  padding: 4rem 1rem 2rem;
   font-size: 0.95rem;
   color: #333;
+  border-top: 1px solid #e0e0e0;
 }
 .footer-container {
   display: flex;
@@ -187,35 +248,35 @@ header {
   margin: auto;
 }
 .footer-column {
-  flex: 1 1 250px;
-  min-width: 240px;
+  flex: 1 1 300px;
+  min-width: 250px;
 }
 .footer-column h4 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #2b85d3;
 }
-.footer-column p {
-  line-height: 1.6;
-}
+.footer-column p,
 .footer-column a {
+  line-height: 1.6;
   color: #333;
   text-decoration: none;
 }
 .footer-column input[type="email"] {
   width: 100%;
   padding: 0.75rem;
-  margin-top: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 .footer-column button {
-  padding: 0.7rem 1.5rem;
+  width: 100%;
+  padding: 0.7rem;
   background-color: #2b85d3;
   color: white;
   border: none;
-  border-radius: 999px;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -225,22 +286,23 @@ header {
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
+  font-size: 0.85rem;
   border-top: 1px solid #eee;
   padding-top: 1rem;
-  font-size: 0.85rem;
 }
 .footer-bottom a {
   color: #2b85d3;
   text-decoration: none;
 }
 
-/* Hero Section Background */
+/* === Hero Section === */
 .hero-section {
   position: relative;
+  opacity: 0.9; /* 0.0 tamamen şeffaf, 1.0 tamamen görünür */
   background-image: url("test2.png");
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 750px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,39 +314,45 @@ header {
   border-radius: 1rem;
   max-width: 800px;
   text-align: center;
-  width: 100%; /* Neu hinzufügen */
-  box-sizing: border-box; /* Wichtig für Padding */
-  margin: 0 1rem; /* Abstand zum Rand */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 1rem;
 }
 .white-text h1,
 .white-text p {
   color: #fff;
 }
 
-/* Responsive */
+/* === Dark Mode === */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark-mode header,
+body.dark-mode .feedback-card,
+body.dark-mode .item,
+body.dark-mode .sector-box,
+body.dark-mode .site-footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+body.dark-mode .nav-links li a,
+body.dark-mode .footer-column p,
+body.dark-mode .footer-column a,
+body.dark-mode .feedback-text {
+  color: #f1f1f1;
+}
+body.dark-mode .nav-links li a::after {
+  background-color: #f1f1f1;
+}
+
+/* === Responsive === */
 @media (max-width: 1024px) {
   .section-one {
     padding: 6rem 1.5rem;
   }
 }
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    padding: 1rem;
-    position: absolute;
-    right: 1rem;
-    top: 60px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    z-index: 1000;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .menu-btn {
-    display: block;
-  }
   .section-one {
     flex-direction: column;
     align-items: center;
@@ -301,20 +369,119 @@ header {
   .footer-container {
     flex-direction: column;
     align-items: center;
-  }
-  .footer-column {
-    min-width: unset;
-  }
-  @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
     text-align: center;
   }
-
   .footer-column {
     width: 100%;
+    max-width: 500px;
     margin-bottom: 1.5rem;
   }
+  .footer-column button {
+    width: 100%;
+  }// Menü auf Mobilgeräten umschalten
+function toggleMenu() {
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("show");
 }
+
+// Feedback-Daten
+const feedbacks = [
+  {
+    logo: 'logo1.jpg',
+    name: 'Max Mustermann',
+    text: 'Omni AI helped us automate critical workflows securely and quickly. Highly recommended!'
+  },
+  {
+    logo: 'logo1.jpg',
+    name: 'Lisa Schmidt',
+    text: 'Die maßgeschneiderten KI-Lösungen haben unsere Effizienz enorm gesteigert.'
+  },
+  {
+    logo: 'logo1.jpg',
+    name: 'Dr. Ahmed Reza',
+    text: 'Die Beratung war zielgerichtet, kompetent und hat unsere Erwartungen übertroffen.'
+  }
+];
+
+let currentIndex = 0;
+let autoSlideInterval;
+
+// Feedback aktualisieren
+function updateFeedback() {
+  const card = document.getElementById('feedbackCard');
+  if (!card) return;
+  const data = feedbacks[currentIndex];
+  const logo = card.querySelector('.feedback-logo');
+  const name = card.querySelector('.feedback-name');
+  const text = card.querySelector('.feedback-text');
+  if (logo) logo.src = data.logo;
+  if (name) name.textContent = data.name;
+  if (text) text.textContent = data.text;
+}
+
+// Nächstes Feedback anzeigen
+function nextFeedback() {
+  currentIndex = (currentIndex + 1) % feedbacks.length;
+  updateFeedback();
+}
+
+// Vorheriges Feedback anzeigen
+function prevFeedback() {
+  currentIndex = (currentIndex - 1 + feedbacks.length) % feedbacks.length;
+  updateFeedback();
+}
+
+// Automatischer Feedback-Slider alle 10 Sekunden
+function startAutoSlider() {
+  const card = document.getElementById('feedbackCard');
+  if (!card) return;
+  autoSlideInterval = setInterval(nextFeedback, 10000);
+}
+
+// Scroll-to-top-Button
+function setupScrollToTop() {
+  const button = document.createElement("button");
+  button.id = "scrollTopBtn";
+  button.innerText = "↑";
+  button.setAttribute("aria-label", "Zurück zum Anfang");
+  button.style.cssText = `
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 0.75rem 1rem;
+    background-color: #2b85d3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  `;
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(button);
+
+  window.addEventListener("scroll", () => {
+    button.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+}
+
+// Dark Mode zwischen 22:00 und 07:00 aktivieren
+function applyDarkMode() {
+  const hour = new Date().getHours();
+  if (hour >= 18 || hour < 7) {
+    document.documentElement.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateFeedback();
+  startAutoSlider();
+  setupScrollToTop();
+  applyDarkMode();
+});
 }

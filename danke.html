@@ -5,48 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nachricht gesendet</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      text-align: center;
-      background-color: #f9fbfc;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    .confirmation-box {
-      background-color: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.08);
-      max-width: 600px;
-      margin: auto;
-    }
-    .confirmation-box h1 {
-      color: #1d3557;
-    }
-    .confirmation-box p {
-      color: #444;
-      margin-top: 1rem;
-    }
-    a.home-link {
-      display: inline-block;
-      margin-top: 2rem;
-      text-decoration: none;
-      background-color: #3478f6;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-    }
-  </style>
 </head>
 <body>
-  <div class="confirmation-box">
-    <h1>Vielen Dank für Ihre Nachricht!</h1>
-    <p>Wir haben Ihre Anfrage erhalten und melden uns zeitnah bei Ihnen.</p>
-    <a href="index.html" class="home-link">Zurück zur Startseite</a>
-  </div>
+
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="testlogo.jpg" alt="Logo" class="logo" />
+      </a>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Lösung.html">Lösungen & Produkte</a></li>
+          <li><a href="Kunden.html">Kunden</a></li>
+          <li><a href="Kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-two" style="display: flex; align-items: center; justify-content: center; min-height: 80vh;">
+      <div class="item" style="background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.08); max-width: 600px; text-align: center;">
+        <h1 style="color: #2b85d3;">Vielen Dank für Ihre Nachricht!</h1>
+        <p style="color: #444; margin-top: 1rem;">Wir haben Ihre Anfrage erhalten und melden uns zeitnah bei Ihnen.</p>
+        <a href="index.html" class="home-link" style="display: inline-block; margin-top: 2rem; background-color: #2b85d3; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">Zurück zur Startseite</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <p>
+          Omni AI Solution GmbH<br />
+          Berlin<br />
+          <a href="mailto:contact@omnaisolution.com">contact@omniaisolution.com</a><br />
+          <a href="tel:+491781483949">+49 178 148 3949</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>INNOVATE</h4>
+        <p>Maßgeschneiderte Lösungen für Ihre<br /> individuellen Bedürfnisse.</p>
+      </div>
+      <div class="footer-column">
+        <h4>EXPERIENCE</h4>
+        <form>
+          <input type="email" placeholder="Ihre Email Adresse" required />
+          <button type="submit">Ihre Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      ©2025. Alle Rechte vorbehalten. | <a href="Impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

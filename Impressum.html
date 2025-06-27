@@ -1,69 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impressum – Omni AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f8fafc;
-      color: #333;
-    }
-    header {
+    .impressum-wrapper {
+      max-width: 700px;
+      margin: 4rem auto;
       background: white;
-      color: black;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem 2rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
     }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .logo {
-      height: 50px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    .nav-links li a {
-      color: black;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem 3rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-    .container img {
-      max-width: 140px;
-      margin-bottom: 1.5rem;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
+    .impressum-wrapper h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
       color: #2b85d3;
     }
-    p {
-      line-height: 1.8;
-      margin-bottom: 1rem;
+    .impressum-wrapper p {
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
     }
-    strong {
+    .impressum-wrapper strong {
       display: inline-block;
       margin-top: 1.5rem;
       font-weight: 600;
@@ -71,43 +32,76 @@
   </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-          <img src="logo1.jpg" alt="Logo" class="logo" />
-          <nav>
-            <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="Lösung.html">Lösungen & Produkte</a></li>
-              <li><a href="Kunden.html">Kunden</a></li>
-              <li><a href="Kontakt.html">Kontakt</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
 
-  <div class="container">
-    <img src="logo1.jpg" alt="Omni AI Logo">
-    <h1>Impressum</h1>
+  <header>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="testlogo.jpg" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Lösung.html">Lösungen & Produkte</a></li>
+          <li><a href="Kunden.html">Kunden</a></li>
+          <li><a href="Kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
 
-    <p><strong>Omni AI Solution GmbH</strong><br>
-    Tiroler Straße 3<br>
-    71069 Sindelfingen</p>
+  <main>
+    <div class="impressum-wrapper">
+      <h1>Impressum</h1>
 
-    <p>Telefon: +49 178 1483949<br>
-    E-Mail: contact@omnaisolution.com</p>
+      <p><strong>Omni AI Solution GmbH</strong><br>
+      Tiroler Straße 3<br>
+      71069 Sindelfingen</p>
 
-    <p>Vertreten durch den Geschäftsführer:<br>
-    Dr. Yildirim Dülgar</p>
+      <p>Telefon: +49 178 1483949<br>
+      E-Mail: contact@omnaisolution.com</p>
 
-    <p><strong>Registereintrag:</strong><br>
-    Eingetragen im Handelsregister.<br>
-    Registergericht: Amtsgericht Berlin-Charlottenburg<br>
-    Registernummer: HRB 272868</p>
+      <p>Vertreten durch den Geschäftsführer:<br>
+      Dr. Yildirim Dülgar</p>
 
-    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-    Omni AI Solution GmbH<br>
-    Tiroler Straße 3<br>
-    71069 Sindelfingen</p>
-  </div>
+      <p><strong>Registereintrag:</strong><br>
+      Eingetragen im Handelsregister.<br>
+      Registergericht: Amtsgericht Berlin-Charlottenburg<br>
+      Registernummer: HRB 272868</p>
+
+      <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+      Omni AI Solution GmbH<br>
+      Tiroler Straße 3<br>
+      71069 Sindelfingen</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <p>Omni AI Solution GmbH<br>Berlin<br>
+          <a href="mailto:contact@omnaisolution.com">contact@omnaisolution.com</a><br>
+          <a href="tel:+491781483949">+49 178 148 3949</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>INNOVATE</h4>
+        <p>Maßgeschneiderte Lösungen für Ihre<br>individuellen Bedürfnisse.</p>
+      </div>
+      <div class="footer-column">
+        <h4>EXPERIENCE</h4>
+        <form>
+          <input type="email" placeholder="Ihre Email Adresse" required>
+          <button type="submit">Ihre Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      ©2025. Alle Rechte vorbehalten. | <a href="Impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
