@@ -71,6 +71,9 @@ header {
     top: 1rem;
     right: 1rem;
   }
+  .nav-container {
+  position: relative;
+}
   .nav-links {
     display: none;
     flex-direction: column;
@@ -295,6 +298,29 @@ header {
 .footer-bottom a {
   color: #2b85d3;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-column {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 0.3rem;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    margin: 0.2rem 0;
+    line-height: 1.3;
+  }
 }
 
 /* === Hero Section === */
