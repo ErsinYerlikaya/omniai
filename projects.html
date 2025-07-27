@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omni AI Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  </style>
+</head>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html">
+      <img src="testlogo.jpg" alt="Logo" class="logo" />
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="patents.html">Patents</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="hero-section hero-subpage" style="background-image: url('Header2.png');">
+  <div class="hero-text-block">
+    <h1>Projects</h1>
+    <p>Here are some of our projects to get an impression</p>
+  </div>
+</section>
+
+<section class="intro-text">
+  <h1>WCost-Efficiency & High-Productivity Through AI & Technology</h1>
+  <p>
+    We drive transformation through compliant and secure AI, tailored software, and smart automation, helping businesses
+    and authorities to enhance efficiency, reduce costs, and grow.
+    Explore the possibilities with us and take the first step toward a smarter future.
+  </p>
+</section>
+
+<body>
+
+  <div class="projects-grid">
+
+    <div class="project-box" onclick="showOverlay(0)">
+      <img src="Project1.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>Capacity & Worker Planning for Gastronomy</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(1)">
+      <img src="Project2.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>Efficient Product-Portfolio Optimization in Gastronomy</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(2)">
+      <img src="Project3.jpg" alt="Projektbild">
+      <div class="project-title">
+        <span>Customer Experience & Feedback Analytics</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(3)">
+      <img src="Project5.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>AI-Driven Traffic Flow Analysis & Prediction</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(4)">
+      <img src="Project6.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>AI-Powered Traffic Jam Detection via Camera Analytics</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(5)">
+      <img src="Project7.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>Driving Behavior Analytics for Autonomous Turns (ADAS & AVs)</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(6)">
+      <img src="Project8.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>Smart Grid Optimization through Bidirectional EV Charging</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(7)">
+      <img src="Project4.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>Smart Family 360 – AI-Powered Relationship Support with Real Impact</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(8)">
+      <img src="Project9.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>Influencer Sentiment & Topic Intelligence via NLP</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(9)">
+      <img src="Project10.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>AI-Powered Baby Care Product Review Analyzer</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(10)">
+      <img src="Project11.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>AI-Powered Baby Care Product Review Analyzer</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+    <div class="project-box" onclick="showOverlay(11)">
+      <img src="Project12.jpeg" alt="Projektbild">
+      <div class="project-title">
+        <span>AI-Powered Baby Care Product Review Analyzer</span>
+        <span class="toggle-icon">+</span>
+      </div>
+    </div>
+  </div>
+  <div class="project-overlay" id="overlay">
+
+    <div class="project-detail-box" id="detail-0" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project1.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Capacity & Worker Planning for Gastronomy</h2>
+        <p style="text-align: left;">
+          Modern gastronomy requires more than guesswork and static shift plans.
+          In this project, we developed an AI-based solution that automates staff planning by translating real-time
+          demand data into optimal shift schedules — ensuring the right number of employees are scheduled at the right
+          time.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Ergebnisse auf einen Blick</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• <strong>Up to 15% reduction in overstaffing</strong></li>
+            <li style="margin-bottom: 0.5rem;">• Better compliance with labor laws (e.g., break time rules)</li>
+            <li style="margin-bottom: 0.5rem;">• Real-time adjustment based on POS&amp; booking data</li>
+            <li style="margin-bottom: 0.5rem;">• Less manual work for managers, faster shift approval</li>
+            <li>• Increased employee satisfaction through fair and predictable schedules</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutionsg zu bestehenden Lösungen</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Demand forecast from POS/bookings</td>
+                  <td style="padding: 0.6rem;">✗ Manual estimation</td>
+                  <td style="padding: 0.6rem;">✓ Automated, real-time</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Break scheduling compliance</td>
+                  <td style="padding: 0.6rem;">✗ Often overlooked</td>
+                  <td style="padding: 0.6rem;">✓ Fully integrated</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Shift plan generation</td>
+                  <td style="padding: 0.6rem;">✗ Manual or rigid</td>
+                  <td style="padding: 0.6rem;">✓ Dynamic &amp; constraint-based</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Reduction in overstaffing</td>
+                  <td style="padding: 0.6rem;">✗ Up to 0%</td>
+                  <td style="padding: 0.6rem;">✓ Up to −15% cost savings</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project-detail-box" id="detail-1" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project2.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Efficient Product-Portfolio Optimization in Gastronomy</h2>
+        <p style="text-align: left;">
+          Many cafés and restaurants make menu decisions based on intuition. In this project, we introduced a powerful
+          data-driven solution: a real-time <strong>Effort-Margin Diagram</strong> that visualizes every product's
+          contribution to profit vs. operational cost.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• <strong>Up to 5–10% increase</strong> in overall menu profitability
+            </li>
+            <li style="margin-bottom: 0.5rem;">• Identification of unprofitable, high-effort items for removal or
+              revision</li>
+            <li style="margin-bottom: 0.5rem;">• Discovery of “hidden gems” with low effort and high margin for
+              promotion</li>
+            <li style="margin-bottom: 0.5rem;">• Automated alerts on margin shifts due to supplier or labor cost changes
+            </li>
+            <li>• Continuous optimization based on live POS and kitchen data</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Menu optimization approach</td>
+                  <td style="padding: 0.6rem;">✗ Static spreadsheets</td>
+                  <td style="padding: 0.6rem;">✓ Dynamic visual framework</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Visualization of margin vs. effort</td>
+                  <td style="padding: 0.6rem;">✗ Not available</td>
+                  <td style="padding: 0.6rem;">✓ 2D diagram with real-time updates</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Integration with POS &amp; cost data</td>
+                  <td style="padding: 0.6rem;">✗ Manual input only</td>
+                  <td style="padding: 0.6rem;">✓ Full automation + live recalculation</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Alert system for performance drift</td>
+                  <td style="padding: 0.6rem;">✗ Missing</td>
+                  <td style="padding: 0.6rem;">✓ Smart notifications for key metrics</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Impact on profitability</td>
+                  <td style="padding: 0.6rem;">✗ Limited</td>
+                  <td style="padding: 0.6rem;">✓ +5–10% average gain</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-2" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project3.jpg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Customer Experience & Feedback Analytics</h2>
+        <p style="text-align: left;">
+          Delivering consistent guest satisfaction is a daily challenge in the hospitality industry.
+          In this project, we implemented a fully automated feedback intelligence solution: from scraping multi-channel
+          reviews to triggering guest recovery workflows — all in real time.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Improved average online rating by <strong>+0.3 stars in 3
+                months</strong></li>
+            <li style="margin-bottom: 0.5rem;">• <strong>+5% increase in guest loyalty</strong> through targeted
+              follow-ups</li>
+            <li style="margin-bottom: 0.5rem;">• Real-time alerts for high-risk reviews (e.g., allergies, hygiene)</li>
+            <li style="margin-bottom: 0.5rem;">• Clear team feedback loops: action reports for kitchen &amp; service
+            </li>
+            <li>• Staff leaderboard based on real guest feedback</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Feedback monitoring</td>
+                  <td style="padding: 0.6rem;">✗ Manual check 1× week</td>
+                  <td style="padding: 0.6rem;">✓ Continuous multi-channel scraping</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Sentiment analytics</td>
+                  <td style="padding: 0.6rem;">✗ Not available</td>
+                  <td style="padding: 0.6rem;">✓ NLP-based topic &amp; tone analysis</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Guest recovery</td>
+                  <td style="padding: 0.6rem;">✗ Not automated</td>
+                  <td style="padding: 0.6rem;">✓ Trigger-based apology &amp; voucher flow</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Staff-specific insights</td>
+                  <td style="padding: 0.6rem;">✗ No feedback linkage</td>
+                  <td style="padding: 0.6rem;">✓ Shift-level performance leaderboard</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Kitchen or service improvement loops</td>
+                  <td style="padding: 0.6rem;">✗ Informal / not tracked</td>
+                  <td style="padding: 0.6rem;">✓ Action reports by topic &amp; dish</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Impact on online reputation &amp; loyalty</td>
+                  <td style="padding: 0.6rem;">✗ Passive, reactive</td>
+                  <td style="padding: 0.6rem;">✓ +0.3 stars, +5% repeat visits</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-3" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project5.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>AI-Driven Traffic Flow Analysis & Prediction</h2>
+        <p style="text-align: left;">
+          Managing urban traffic efficiently requires more than just monitoring—it demands predictive intelligence at
+          scale.
+          In this project, we developed a global mobility analytics platform that ingests billions of vehicle data
+          points across continents.
+          Using AI-based pattern recognition, predictive modeling, and big data processing, we deliver real-time traffic
+          insights and future forecasts
+          to city planners, infrastructure providers, and navigation systems.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• <strong>Up to 30% reduction</strong> in congestion hotspots via dynamic
+              traffic routing</li>
+            <li style="margin-bottom: 0.5rem;">• <strong>+40% increase in forecast accuracy</strong> compared to
+              baseline models</li>
+            <li style="margin-bottom: 0.5rem;">• Scalable analytics across <strong>100+ countries</strong> and road
+              types</li>
+            <li style="margin-bottom: 0.5rem;">• Instant anomaly detection (e.g., road closures, mass events)</li>
+            <li>• Smart city integrations for adaptive traffic light control</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Data scope</td>
+                  <td style="padding: 0.6rem;">✗ Local &amp; fragmented</td>
+                  <td style="padding: 0.6rem;">✓ Global-scale, billions of data points</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Prediction quality</td>
+                  <td style="padding: 0.6rem;">✗ Based on past patterns</td>
+                  <td style="padding: 0.6rem;">✓ AI-based future state forecasting</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Real-time anomaly detection</td>
+                  <td style="padding: 0.6rem;">✗ Manual incident reports</td>
+                  <td style="padding: 0.6rem;">✓ Instant alerts from live data streams</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Smart city integration</td>
+                  <td style="padding: 0.6rem;">✗ Static signal control</td>
+                  <td style="padding: 0.6rem;">✓ Adaptive light &amp; lane regulation</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Geographic scalability</td>
+                  <td style="padding: 0.6rem;">✗ Limited to few cities</td>
+                  <td style="padding: 0.6rem;">✓ Cloud-native, global deployment ready</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Data fusion (GPS, IoT, camera, etc.)</td>
+                  <td style="padding: 0.6rem;">✗ Often siloed</td>
+                  <td style="padding: 0.6rem;">✓ Unified multimodal data pipeline</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-4" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project6.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>AI-Powered Traffic Jam Detection via Camera Analytics</h2>
+        <p style="text-align: left;">
+          Real-time traffic monitoring requires more than just road sensors—it needs eyes on the road and intelligence
+          in the cloud.
+          In this project, we deployed a scalable AI solution that uses computer vision to detect, classify, and track
+          vehicle flows from existing street cameras.
+          Our system analyzes congestion patterns, predicts upcoming traffic jams, and supports urban mobility decisions
+          with accurate, camera-based data.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• <strong>90%+ detection accuracy</strong> for traffic slowdowns and
+              standstills</li>
+            <li style="margin-bottom: 0.5rem;">• <strong>+35% improvement in congestion response time</strong> for city
+              operators</li>
+            <li style="margin-bottom: 0.5rem;">• Live classification of vehicle types (cars, trucks, buses, etc.)</li>
+            <li style="margin-bottom: 0.5rem;">• <strong>Predictive alerts up to 15 minutes in advance</strong> of major
+              jams</li>
+            <li>• Reduced reliance on expensive sensor infrastructure</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Hardware dependency</td>
+                  <td style="padding: 0.6rem;">✗ Dedicated sensors needed</td>
+                  <td style="padding: 0.6rem;">✓ Leverages existing street camera feeds</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Jam detection granularity</td>
+                  <td style="padding: 0.6rem;">✗ Speed threshold-based</td>
+                  <td style="padding: 0.6rem;">✓ Visual analysis of density &amp; flow</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Vehicle classification</td>
+                  <td style="padding: 0.6rem;">✗ Not available</td>
+                  <td style="padding: 0.6rem;">✓ Real-time object detection via AI</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Predictive capabilities</td>
+                  <td style="padding: 0.6rem;">✗ Static models</td>
+                  <td style="padding: 0.6rem;">✓ Adaptive AI with short-term forecasting</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Infrastructure integration</td>
+                  <td style="padding: 0.6rem;">✗ Complex installation</td>
+                  <td style="padding: 0.6rem;">✓ Plug-and-play with camera networks</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Cost efficiency</td>
+                  <td style="padding: 0.6rem;">✗ High capex requirements</td>
+                  <td style="padding: 0.6rem;">✓ Software-first, scalable model</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-5" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project7.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Driving Behavior Analytics for Autonomous Turns (ADAS & AVs)</h2>
+        <p style="text-align: left;">
+          Precision in vehicle maneuvering—especially in critical scenarios like left and right turns—is vital for
+          autonomous driving systems and ADAS calibration.
+          In this project, we developed a high-resolution behavior analysis platform that statistically captures,
+          clusters, and benchmarks turning behavior from thousands
+          of autonomous and ADAS-equipped vehicles.
+        </p>
+        <p style="text-align: left;">
+          Leveraging advanced trajectory tracking, edge-based telemetry fusion, and behavior modeling, our system
+          supports safer AI driving decisions and OEM performance evaluation.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Analyzed <strong>over 10 thousand turn maneuvers</strong> from AVs and
+              ADAS</li>
+            <li style="margin-bottom: 0.5rem;">• Identified <strong>15% of left turns with elevated safety risk</strong>
+              (e.g., occlusion, speed variance)</li>
+            <li style="margin-bottom: 0.5rem;">• <strong>+25% improvement</strong> in prediction models for turning
+              intent recognition</li>
+            <li style="margin-bottom: 0.5rem;">• Enabled real-world benchmarking of <strong>OEM-specific ADAS turning
+                patterns</strong></li>
+            <li>• Delivered trajectory clustering &amp; visualization in <strong>real-time dashboards</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-6" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project8.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Smart Grid Optimization through Bidirectional EV Charging</h2>
+        <p style="text-align: left;">
+          Electric vehicles are evolving from passive consumers to active energy participants.
+          In this project, we implemented an AI-driven bidirectional charging system where EVs dynamically feed energy
+          back into the grid.
+        </p>
+        <p style="text-align: left;">
+          By integrating real-time grid signals, vehicle state-of-charge, and usage forecasts, our platform enables
+          demand balancing, peak shaving,
+          and decentralized storage—crucial components for the next-generation energy grid.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Enabled <strong>up to 12% local peak shaving</strong> during
+              high-demand periods</li>
+            <li style="margin-bottom: 0.5rem;">• <strong>Improved grid stability KPIs by 18%</strong> in test regions
+            </li>
+            <li style="margin-bottom: 0.5rem;">• Dynamic charge/discharge scheduling via <strong>predictive energy
+                demand modeling</strong></li>
+            <li style="margin-bottom: 0.5rem;">• Full integration with <strong>ISO-compliant smart meters &amp; grid
+                protocols</strong></li>
+            <li>• Empowered EV owners to <strong>earn energy credits</strong> via grid participation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-7" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project4.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Smart Family 360 – AI-Powered Relationship Support with Real Impact</h2>
+        <p style="text-align: left;">
+          <strong>Smart Family 360</strong> is a digital assistant designed to support individuals, couples, and
+          families through emotionally challenging phases.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Outcome-Driven</h3>
+          <p style="text-align: left;">
+            Using intelligent conversation flows and adaptive surveys, the assistant analyzes emotional patterns and
+            relationship dynamics.
+            The aggregated insights lead to a personalized <strong>action plan</strong> with <strong>clear, practical
+              recommendations</strong> for improving communication,
+            strengthening trust, and increasing emotional well-being.
+          </p>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Tangible Results</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Increased user clarity and satisfaction</li>
+            <li style="margin-bottom: 0.5rem;">• Early prevention of relationship crises</li>
+            <li>• Scalable support tool for professionals, institutions, and municipalities</li>
+          </ul>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; text-align: left;">
+          <em>
+            Built on proven systemic principles (inspired by ISYS BW and DGSF) and fully compliant with GDPR, AI Act,
+            and ethical AI standards.
+          </em>
+        </p>
+      </div>
+    </div>
+    <div class="project-detail-box" id="detail-8" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project9.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Influencer Sentiment & Topic Intelligence via NLP</h2>
+        <p style="text-align: left;">
+          Influencers shape opinions, trends, and brand perception—but tracking their evolving narratives at scale
+          requires more than just keyword monitoring. In this project, we built an AI-powered sentiment and topic
+          modeling engine that continuously
+          analyzes influencer content across YouTube, Instagram, TikTok, and X. Using advanced NLP pipelines, the system
+          detects emotional tone, emerging themes, and audience reactions—empowering brands and analysts with real-time
+          influencer intelligence.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• <strong>Analyzed over 2 million influencer posts and videos across 5
+                platforms</li>
+            <li style="margin-bottom: 0.5rem;">• Identified micro-trend shifts within hours of publication</li>
+            <li style="margin-bottom: 0.5rem;">• +38% increase in brand-influencer alignment accuracy</li>
+            <li style="margin-bottom: 0.5rem;">• Clustering of content into 10+ dynamic sentiment-topic maps</li>
+            <li>• Real-time alerts on reputation risks or viral momentum</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Sentiment analysis </td>
+                  <td style="padding: 0.6rem;">✗ Based on static word lists</td>
+                  <td style="padding: 0.6rem;">✓ Transformer-based contextual emotion models</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Topic detection</td>
+                  <td style="padding: 0.6rem;">✗ Manual tagging</td>
+                  <td style="padding: 0.6rem;">✓ Dynamic topic modeling (LDA/BERT embeddings)</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Platform coverage </td>
+                  <td style="padding: 0.6rem;">✗ Limited to 1–2 sources</td>
+                  <td style="padding: 0.6rem;">✓ Cross-platform (YouTube, IG, TikTok, X, etc.)</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Trend detection</td>
+                  <td style="padding: 0.6rem;">✗ Delayed or reactive</td>
+                  <td style="padding: 0.6rem;">✓ Near real-time with notification triggers</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Visual insights</td>
+                  <td style="padding: 0.6rem;">✗ Basic charts</td>
+                  <td style="padding: 0.6rem;">✓ Sentiment-topic heatmaps and cluster graphs</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Brand relevance scoring</td>
+                  <td style="padding: 0.6rem;">✗ Manual mapping</td>
+                  <td style="padding: 0.6rem;">✓ AI-driven influencer-brand fit suggestions</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-box" id="detail-9" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project10.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>AI-Powered Baby Care Product Review Analyzer</h2>
+        <p style="text-align: left;">
+          Parents rely heavily on product reviews when choosing the right baby care items. In this project, we developed
+          an AI-based sentiment classification system that automatically analyzes user-generated content (UGC) from
+          e-commerce platforms and forums. Leveraging Natural Language Processing (NLP), the system distinguishes
+          between positive, neutral, and negative sentiments and provides product-level insights in real time.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Classified over 500,000 reviews across 150+ baby care products</li>
+            <li style="margin-bottom: 0.5rem;">• Increased consumer trust through AI-backed product transparency</li>
+            <li style="margin-bottom: 0.5rem;">• Enabled dynamic product scoring based on live feedback trends</li>
+            <li style="margin-bottom: 0.5rem;">• Identified top customer concerns (e.g., skin irritation, packaging)
+            </li>
+            <li>• Supported marketing teams with automated sentiment dashboards</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Review processing</td>
+                  <td style="padding: 0.6rem;">✗ Manual sampling</td>
+                  <td style="padding: 0.6rem;">✓ Full-scale automated text parsing</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Sentiment classification</td>
+                  <td style="padding: 0.6rem;">✗ Keyword-based, error-prone</td>
+                  <td style="padding: 0.6rem;">✓ Deep NLP with emotion-aware tagging</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Product benchmarking</td>
+                  <td style="padding: 0.6rem;">✗ Static ratings only</td>
+                  <td style="padding: 0.6rem;">✓ Dynamic sentiment-weighted scoring</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Topic-level insights</td>
+                  <td style="padding: 0.6rem;">✗ Not available</td>
+                  <td style="padding: 0.6rem;">✓ Clustering by concern and feature</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Real-time monitoring</td>
+                  <td style="padding: 0.6rem;">✗ Delayed or batch-based</td>
+                  <td style="padding: 0.6rem;">✓ Instant insights with continuous updates</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Actionable outputs for teams</td>
+                  <td style="padding: 0.6rem;">✗ Raw data only</td>
+                  <td style="padding: 0.6rem;">✓ Ready-to-use dashboards for marketing</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-box" id="detail-10" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project11.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>AI-Driven Knowledge Retention for Teams</h2>
+        <p style="text-align: left;">
+          Losing critical know-how during employee transitions is a major risk for any organization. To solve this, we
+          developed an AI-powered system that extracts, structures, and preserves departmental knowledge from diverse
+          formats like PDF, Word, PowerPoint, and text—supporting both seamless onboarding and efficient offboarding.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Reduced onboarding time by -40% through structured knowledge access
+            </li>
+            <li style="margin-bottom: 0.5rem;">• Preserved 90%+ of critical know-how during employee offboarding</li>
+            <li style="margin-bottom: 0.5rem;">• Unified documentation from 5+ file formats into searchable knowledge
+              graphs</li>
+            <li style="margin-bottom: 0.5rem;">• Enabled AI-powered Q&A for new joiners to query legacy content</li>
+            <li>• Department-specific dashboards for knowledge gaps & coverage insights</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Multi-format knowledge extraction</td>
+                  <td style="padding: 0.6rem;">✗ Manual, fragmented</td>
+                  <td style="padding: 0.6rem;">✓ Automated parsing of PDF, PPT, DOCX, TXT</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Onboarding content structuring</td>
+                  <td style="padding: 0.6rem;">✗ Static documents</td>
+                  <td style="padding: 0.6rem;">✓ AI-based summarization & tagging</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Offboarding knowledge capture</td>
+                  <td style="padding: 0.6rem;">✗ Reliant on exit interviews</td>
+                  <td style="padding: 0.6rem;">✓ Intelligent harvesting from digital assets</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Searchability & accessibility</td>
+                  <td style="padding: 0.6rem;">✗ Folder-based, slow</td>
+                  <td style="padding: 0.6rem;">✓ AI-powered semantic search</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Department-level insights</td>
+                  <td style="padding: 0.6rem;">✗ Not available</td>
+                  <td style="padding: 0.6rem;">✓ Dashboard with coverage & freshness KPIs</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Query response for new employees</td>
+                  <td style="padding: 0.6rem;">✗ Human-dependent</td>
+                  <td style="padding: 0.6rem;">✓ Conversational AI interface</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-detail-box" id="detail-11" style="display: none;">
+      <span class="close-btn" onclick="closeOverlay()">×</span>
+      <img src="Project12.jpeg" alt="Großes Projektbild">
+      <div class="project-text">
+        <h2>Voice-Triggered Intelligence for Embedded & Edge Devices</h2>
+        <p style="text-align: left;">
+          To enable seamless user interaction with smart devices, we developed an audio keyword spotting system tailored
+          for embedded and edge environments. Using advanced signal processing and AI models, our solution detects
+          predefined voice commands locally, then securely triggers cloud-based workflows — delivering low-latency
+          performance with minimal energy consumption. </p>
+        <div style="margin-top: 1.5rem;">
+          <h3>Results at a Glance</h3>
+          <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• Achieved >95% keyword detection accuracy on low-power edge chips</li>
+            <li style="margin-bottom: 0.5rem;">• Reduced cloud load by up to 70% through on-device pre-filtering</li>
+            <li style="margin-bottom: 0.5rem;">• Wake-word latency below 150 ms for instant user engagement</li>
+            <li style="margin-bottom: 0.5rem;">• Enabled privacy-first voice UX with offline processing</li>
+            <li>• Scalable deployment across IoT, wearables & automotive platforms</li>
+          </ul>
+        </div>
+        <div style="margin-top: 2rem;">
+          <h3>Differentiation from Existing Solutions</h3>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+              <thead style="background-color: #f0f8ff;">
+                <tr>
+                  <th style="padding: 0.75rem; text-align: left;">Feature</th>
+                  <th style="padding: 0.75rem; text-align: left;">Legacy Tools</th>
+                  <th style="padding: 0.75rem; text-align: left;">Our Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">On-device keyword spotting</td>
+                  <td style="padding: 0.6rem;">✗ Not supported</td>
+                  <td style="padding: 0.6rem;">✓ Lightweight edge inference</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Wake-word latency </td>
+                  <td style="padding: 0.6rem;">✗ >300 ms</td>
+                  <td style="padding: 0.6rem;">✓ ~150 ms response time</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Cloud dependency</td>
+                  <td style="padding: 0.6rem;">✗ Always streaming</td>
+                  <td style="padding: 0.6rem;">✓ Cloud triggered only on activation</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Energy efficiency </td>
+                  <td style="padding: 0.6rem;">✗ High power draw</td>
+                  <td style="padding: 0.6rem;">✓ Optimized for embedded chipsets</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Data privacy</td>
+                  <td style="padding: 0.6rem;">✗ Continuous recording</td>
+                  <td style="padding: 0.6rem;">✓ Local pre-processing & encryption</td>
+                </tr>
+                <tr style="border-top: 1px solid #e0e0e0;">
+                  <td style="padding: 0.6rem;">Cross-device scalability</td>
+                  <td style="padding: 0.6rem;">✗ Platform-specific</td>
+                  <td style="padding: 0.6rem;">✓ Modular architecture for any OS/MCU</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    let currentOpen = null;
+
+    function showOverlay(index) {
+      document.getElementById("overlay").classList.add("open");
+      if (currentOpen !== null) {
+        document.getElementById("detail-" + currentOpen).style.display = "none";
+      }
+      document.getElementById("detail-" + index).style.display = "flex";
+      currentOpen = index;
+    }
+
+    function closeOverlay() {
+      if (currentOpen !== null) {
+        document.getElementById("detail-" + currentOpen).style.display = "none";
+        document.getElementById("overlay").classList.remove("open");
+        currentOpen = null;
+      }
+    }
+  </script>
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <p>
+          Omni AI Solution GmbH<br>
+          Berlin<br>
+          <a href="mailto:contact@omnaisolution.com">contact@omniaisolution.com</a><br>
+          <a href="tel:+491781483949">+49 178 148 3949</a>
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>INNOVATE</h4>
+        <p>Maßgeschneiderte Lösungen für Ihre<br>individuellen Bedürfnisse.</p>
+      </div>
+      <div class="footer-column">
+        <h4>EXPERIENCE</h4>
+        <form>
+          <input type="email" placeholder="Ihre Email Adresse" required>
+          <button type="submit">Ihre Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      ©2025. Alle Rechte vorbehalten. | <a href="Impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services – Omni AI Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="testlogo.jpg" alt="Logo" class="logo">
+            </a>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="patents.html">Patents</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section hero-subpage" style="background-image: url('Header2.png');">
+        <div class="hero-text-block">
+            <h1>Our Services</h1>
+            <p>Explore our full-service AI & software offerings</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="intro-text">
+            <h1>Our Services</h1>
+            <p>
+
+                At Omni AI Solution GmbH, we deliver intelligent, efficient, and compliant technology solutions powered
+                by AI, data science, and automation. Our services are designed to generate measurable impact — whether
+                through strategic innovation, operational optimization, or regulatory alignment.
+
+            </p>
+        </section>
+        <div class="projects-grid">
+            <!-- 1 -->
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services1.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Fast Prototyping & Proof of Concepts (PoC)</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Fast Prototyping & Proof of Concepts (PoC)</h3>
+                    <p>Innovation moves fast — and so do we. With our fast prototyping and PoC services, clients can see
+                        their AI and software ideas come to life in as little as 2 to 6 weeks. We specialize in rapidly
+                        turning concepts into working Minimum Viable Products (MVPs) or demo-ready applications,
+                        enabling quick iteration, testing, and validation. This is particularly valuable for
+                        organizations seeking early market feedback, internal buy-in, or eligibility for funding.</p>
+                    <p>We use agile development frameworks and low-latency infrastructure to support accelerated
+                        deployment cycles. Depending on the use case, we incorporate pre-trained AI models (e.g., for
+                        text, vision, or forecasting) and combine them with custom data and lightweight user interfaces.
+                        The goal is to help clients understand technical feasibility, potential value, and how end-users
+                        interact with the concept — without large upfront investments.</p>
+                    <p>This rapid validation reduces the risk of investing in the wrong direction and ensures
+                        stakeholders can make informed decisions. The speed of delivery also enables public sector
+                        institutions or startups to meet grant deadlines or funding milestones with working
+                        demonstrators, which can significantly improve their chances of success.</p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services2.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Predictive Analytics & Data Pipeline Engineering</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Predictive Analytics & Data Pipeline Engineering</h3>
+                    <p>In a world where timing is everything, predictive analytics transforms your business into a
+                        proactive force. At Omni AI Solution GmbH, we develop robust forecasting solutions powered by
+                        time series models, machine learning algorithms, and AI-enhanced decision-making.</p>
+
+                    <p>IWe architect scalable data pipelines using tools like Apache Kafka, Apache Airflow, or dbt to
+                        ingest, clean, and store high-frequency data from various internal and external sources. We
+                        implement forecasting models — such as ARIMA, Facebook Prophet, XGBoost, and LSTM — tailored to
+                        specific applications like demand forecasting, traffic prediction, energy load management, or
+                        financial market outlooks. These pipelines integrate seamlessly with cloud storage, real-time
+                        dashboards, and operational systems.</p>
+
+                    <p>IThe business impact is substantial: our clients gain the ability to anticipate future trends and
+                        adjust operations accordingly. Whether it's optimizing inventory, reducing energy waste, or
+                        preparing for seasonal demand, predictive analytics helps organizations move from reactive to
+                        strategic — increasing competitiveness and resource efficiency.
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services3.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Dashboarding, KPIs & Data Visualization</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Dashboarding, KPIs & Data Visualization</h3>
+                    <p>Great decisions start with clear visibility. Our dashboarding and data visualization services
+                        empower teams and leaders to track performance, monitor critical indicators, and make informed
+                        decisions in real time. We transform raw data into interactive, intuitive dashboards that are
+                        customized to the specific needs of your organization.</p>
+
+                    <p>GWe leverage tools like Microsoft Power BI, Grafana, Tableau, and custom-built solutions using
+                        D3.js or React to deliver dynamic visualizations. These dashboards integrate data from ERPs,
+                        CRMs, IoT sensors, APIs, and data warehouses — offering real-time updates, filtering options,
+                        and drill-down capabilities. Visual storytelling and role-based access ensure that stakeholders
+                        only see what’s most relevant to them.</p>
+
+                    <p>GThe result? Improved transparency across departments, faster reaction to operational changes,
+                        and empowered strategic planning. Clients in both public and private sectors benefit from better
+                        reporting, simplified compliance monitoring, and more agile business management.
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services4.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Automation & AI Solutions</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Automation & AI Solutions</h3>
+                    <p>Automation is no longer a luxury — it's a necessity. We help organizations unlock productivity by
+                        replacing manual, repetitive processes with intelligent, AI-powered automation systems. Our
+                        solutions reduce operational costs, improve consistency, and enable your team to focus on
+                        higher-value tasks.</p>
+
+                    <p>GUsing a combination of rule-based engines, robotic process automation (RPA), and AI models
+                        (e.g., NLP, decision trees, reinforcement learning), we build end-to-end systems for workflow
+                        automation, customer support, document classification, and decision-making. We also integrate
+                        these tools with enterprise software stacks to ensure smooth adoption and minimal disruption.
+                    </p>
+
+                    <p>GBusinesses using our automation services report faster turnaround times, higher process
+                        accuracy, and reduced human error. Whether you're in public administration or manufacturing,
+                        AI-powered automation can free up your resources and drive measurable gains in efficiency and
+                        satisfaction.
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services5.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Data & Knowledge Processing</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Data & Knowledge Processing</h3>
+                    <p>In most organizations, valuable knowledge is hidden in scattered files, emails, and legacy
+                        documents. We offer a comprehensive solution to unlock, organize, and operationalize this
+                        knowledge. Our AI-powered knowledge processing services help create internal hubs that improve
+                        access to strategic information and reduce dependency on individual expertise.</p>
+
+                    <p>Using natural language processing (NLP), optical character recognition (OCR), and semantic
+                        search, we extract and structure information from unstructured sources — including PDF, Word,
+                        PowerPoint, and TXT files. These are indexed in vector databases like FAISS or Elasticsearch and
+                        made searchable through custom interfaces.</p>
+
+                    <p>This enables fast onboarding of new employees, access to critical SOPs and project insights, and
+                        a reduction in duplicate efforts. Organizations benefit from increased resilience, improved
+                        documentation workflows, and a stronger foundation for data-driven decision-making.
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services6.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Responsible & Compliant AI</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Responsible & Compliant AI</h3>
+                    <p>AI brings immense potential — but also serious risks. At Omni AI Solution GmbH, we ensure that
+                        your AI systems are not only powerful, but also ethical, explainable, and legally compliant. We
+                        specialize in building AI that adheres to GDPR, the EU AI Act, and domain-specific regulations
+                        in sectors like healthcare, finance, and public services.</p>
+
+                    <p>We integrate mechanisms for fairness, transparency, and accountability into the model lifecycle.
+                        This includes bias detection, explainability (SHAP, LIME), audit logging, and full model
+                        documentation. Our development pipelines align with risk-based categorization standards outlined
+                        by European law, enabling clients to deploy high-risk or limited-risk systems confidently.</p>
+
+                    <p>By working with us, you not only future-proof your systems against legal exposure but also
+                        increase trust among users, regulators, and partners. Responsible AI is no longer optional —
+                        it’s a competitive advantage and a safeguard for your reputation.
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services7.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Cloud Infrastructure & Scalable AI</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Cloud Infrastructure & Scalable AI</h3>
+                    <p>Scalability, security, and performance are at the heart of every successful AI deployment. We
+                        design and build cloud infrastructures that are tailored for AI workloads — from real-time
+                        inference engines to large-scale batch processing and MLOps pipelines.</p>
+
+                    <p>SOur engineers work across major platforms like AWS, Microsoft Azure, and Google Cloud, setting
+                        up auto-scaling environments, secure APIs, and CI/CD pipelines for model versioning and
+                        deployment. We containerize services using Docker and orchestrate them with Kubernetes, ensuring
+                        modularity and fault tolerance. Whether your use case involves model serving, large data
+                        ingestion, or hybrid edge-cloud scenarios, we architect for efficiency and cost control.</p>
+
+                    <p>SFor clients, this means predictable performance, better resource utilization, and the ability to
+                        scale services up or down in response to demand. You get peace of mind, knowing your
+                        infrastructure can support current and future innovation — without unexpected surprises or
+                        limitations.
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services8.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Big Data Analytics & Forecasting</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Big Data Analytics & Forecasting</h3>
+                    <p>Data is the fuel of modern business — and we help you harness it at scale. Our big data analytics
+                        services are built for organizations that manage massive volumes of structured and unstructured
+                        information. Using distributed computing tools like Apache Spark, Dask, and Hadoop, we enable
+                        high-throughput data ingestion, cleaning, transformation, and advanced analytics.</p>
+
+                    <p>Forecasting is a core component of our solutions. We develop and deploy statistical and machine
+                        learning models for scenario simulation, trend forecasting, and resource planning. These models
+                        are particularly useful in sectors like energy, logistics, retail, and public utilities, where
+                        predictive insights drive core operations.</p>
+
+                    <p>Clients benefit from faster insights, more accurate predictions, and the ability to shift from
+                        reactive to proactive management. With our systems in place, you're not just analyzing what
+                        happened — you're anticipating what’s next.
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services9.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Sentiment Analysis & Statistics</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Sentiment Analysis & Statistics</h3>
+                    <p>Understanding public perception and customer sentiment has become essential for strategic
+                        decisions. Our sentiment analysis systems go far beyond simple keyword matching. We use
+                        transformer-based language models (like BERT and RoBERTa) fine-tuned for sentiment detection
+                        across industries and languages.</p>
+
+                    <p>We apply these models to analyze data from customer reviews, social media, feedback forms,
+                        emails, or internal surveys. The results are aggregated and visualized using custom dashboards,
+                        highlighting sentiment trends over time and their correlation with key business metrics.</p>
+
+                    <p>This enables marketing teams to refine messaging, HR to assess morale, and executives to detect
+                        early signals of dissatisfaction or opportunity. In regulated sectors, sentiment analytics can
+                        also support compliance by flagging risks in real-time communication.
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services10.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Software Engineering & Systems Development</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Software Engineering & Systems Development</h3>
+                    <p>We build robust, scalable, and user-friendly software platforms that power digital
+                        transformation. Our full-stack development services include frontend and backend systems, APIs,
+                        analytics portals, admin panels, and secure integrations — all designed around your operational
+                        needs.</p>
+
+                    <p>Our development process follows clean architecture principles, DevSecOps practices, and
+                        extensive automated testing. We work with modern frameworks such as React, Angular, Node.js,
+                        Django, FastAPI, and PostgreSQL — ensuring maintainability and speed. For AI-driven
+                        applications, we integrate machine learning services directly into the system, either on the
+                        backend or embedded in user interfaces.</p>
+
+                    <p>0
+                        The result: flexible, future-proof software that supports growth, improves efficiency, and
+                        delivers seamless user experiences. Clients benefit from reduced technical debt, shorter
+                        development cycles, and full control over their digital ecosystem.
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services11.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Custom Language Model Development</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Custom Language Model Development</h3>
+                    <p>Generic language models are powerful — but domain-specific models are transformative. We build
+                        custom large language models (LLMs) that are tailored to the linguistic patterns, terminologies,
+                        and document structures unique to your organization or sector.</p>
+
+                    <p>We start by curating a high-quality dataset from your internal files, documentation, chat
+                        transcripts, or knowledge base. We then fine-tune models such as LLaMA, GPT-J, or open-source
+                        alternatives using advanced techniques like reinforcement learning with human feedback (RLHF),
+                        prompt tuning, or adapters. These models are then integrated into your infrastructure, either
+                        via API or on-prem deployment.</p>
+
+                    <p>Applications range from document summarization and legal parsing to multilingual chatbots and
+                        semantic search engines. Businesses benefit from significant cost savings in customer service,
+                        compliance, and document analysis — while maintaining full control over the model's knowledge
+                        scope and security.
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services12.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>AI Strategy & Digital Innovation</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>AI Strategy & Digital Innovation</h3>
+                    <p>AI success starts with the right strategy. We support leadership teams with defining and
+                        executing AI and digital transformation roadmaps that are practical, measurable, and fundable.
+                        Our process begins with an AI-readiness assessment, which evaluates data maturity, process
+                        automation levels, and organizational alignment.</p>
+
+                    <p>From there, we conduct ideation workshops and use case discovery sessions to surface
+                        opportunities that provide the highest ROI. We also assist with creating implementation roadmaps
+                        and funding strategies, including proposal writing for grants (e.g. EU, BMWK) or public tenders.
+                    </p>
+
+                    <p>This service is especially valuable for public institutions and mid-sized companies seeking to
+                        innovate responsibly and efficiently. Clients gain not just a vision for the future, but a
+                        concrete, actionable plan — with the support and tools to implement it.
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services13.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Domain-Specific AI Solutions</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Domain-Specific AI Solutions</h3>
+                    <p>Off-the-shelf AI doesn’t fit every sector. That’s why we offer deeply customized solutions
+                        tailored to specific domains:</p>
+                    <ul>
+                        <li>
+                            <p><strong>Energy & Utilities:</strong> We provide forecasting tools, anomaly detection in grid
+                            behavior, and
+                            real-time efficiency analysis. Our AI systems help reduce outages, optimize load balancing,
+                            and forecast renewable generation.</p>
+                        </li>
+                        <li>
+                            <p><strong>Smart Cities:</strong> We deploy AI models for traffic flow prediction,
+                            infrastructure maintenance
+                            planning, and smart citizen service platforms.</p>
+                        </li>
+                        <li>
+                            <p><strong>Healthcare:</strong> We develop medical NLP pipelines, AI-assisted diagnostics,
+                            triage systems, and
+                            anonymization tools for sensitive health data.</p>
+                        </li>
+                        <li>
+                            <p><strong>Finance & Insurance:</strong> We enable fraud detection, credit scoring, automated
+                            claims
+                            processing, and regulatory NLP for compliance workflows.</p>
+                        </li>
+                    </ul>
+
+                    <p>These industry-specific solutions deliver measurable value faster, reduce implementation
+                        friction, and reflect our deep understanding of real operational environments.</p>
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-box" onclick="toggleService(this)">
+                <div class="project-header">
+                    <img src="services14.jpeg" alt="Service 1">
+                    <div class="project-title">
+                        <span>Custom Algorithms & Mathematical Modeling</span>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Custom Algorithms & Mathematical Modeling</h3>
+                    <p>Not every problem can be solved with pre-trained AI. Some require the precision of custom
+                        mathematical models. We develop algorithmic solutions for optimization, planning, simulation,
+                        and control based on your specific constraints and KPIs. </p>
+
+                        <p>We use linear programming, mixed-integer optimization, Monte Carlo simulation, and hybrid AI
+                        methods that combine heuristics with machine learning. Our models are deployed in logistics
+                        optimization, pricing strategy, workforce scheduling, and infrastructure design. </p>
+
+                        <p>Clients gain the ability to run complex scenarios, test what-if conditions, and make decisions
+                        based on mathematically sound logic. These tools reduce uncertainty, improve strategic planning,
+                        and drive better business outcomes in high-stakes environments.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>CONNECT</h4>
+                <p>
+                    Omni AI Solution GmbH<br>
+                    Berlin<br>
+                    <a href="mailto:contact@omnaisolution.com">contact@omniaisolution.com</a><br>
+                    <a href="tel:+491781483949">+49 178 148 3949</a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>INNOVATE</h4>
+                <p>Maßgeschneiderte Lösungen für Ihre<br>individuellen Bedürfnisse.</p>
+            </div>
+            <div class="footer-column">
+                <h4>EXPERIENCE</h4>
+                <form>
+                    <input type="email" placeholder="Ihre Email Adresse" required>
+                    <button type="submit">Ihre Anfrage senden</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            ©2025. Alle Rechte vorbehalten. | <a href="Impressum.html">Impressum</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleService(clickedBox) {
+            const allBoxes = document.querySelectorAll('.project-box');
+
+            const isAlreadyOpen = clickedBox.classList.contains('open');
+
+            allBoxes.forEach(box => box.classList.remove('open'));
+            document.body.classList.remove('popup-active');
+
+            if (!isAlreadyOpen) {
+                clickedBox.classList.add('open');
+                document.body.classList.add('popup-active');
+            }
+        }
+
+        // Optional: Schließen beim Klick außerhalb
+        document.addEventListener('click', function (e) {
+            const openBox = document.querySelector('.project-box.open');
+            if (openBox && !openBox.contains(e.target)) {
+                openBox.classList.remove('open');
+                document.body.classList.remove('popup-active');
+            }
+        });
+    </script>
+</body>
+
+</html>

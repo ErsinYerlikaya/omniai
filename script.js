@@ -4,6 +4,27 @@ function toggleMenu() {
   navLinks.classList.toggle("show");
 }
 
+function toggleProject(headerElement) {
+  const box = headerElement.closest('.project-box');
+  const details = box.querySelector('.project-details');
+  const icon = headerElement.querySelector('.toggle-icon');
+
+  const isOpen = box.classList.contains('open');
+
+  // Alle Boxen schließen
+  document.querySelectorAll('.project-box').forEach(b => {
+    b.classList.remove('open');
+    b.querySelector('.project-details').style.display = 'none';
+    b.querySelector('.toggle-icon').textContent = '+';
+  });
+
+  if (!isOpen) {
+    box.classList.add('open');
+    details.style.display = 'block';
+    icon.textContent = '−';
+  }
+}
+
 // Feedback-Daten
 const feedbacks = [
   {
@@ -90,13 +111,13 @@ function setupScrollToTop() {
 }
 
 // Dark Mode zwischen 22:00 und 07:00 aktivieren
-function applyDarkMode() {
-  const hour = new Date().getHours();
-  if (hour >= 22 || hour < 7) {
-    document.documentElement.classList.add("dark-mode");
-    document.body.classList.add("dark-mode");
-  }
-}
+//function applyDarkMode() {
+//  const hour = new Date().getHours();
+//  if (hour >= 5 || hour < 7) {
+//    document.documentElement.classList.add("dark-mode");
+//    document.body.classList.add("dark-mode");
+//  }
+//}
 
 document.addEventListener("DOMContentLoaded", () => {
   updateFeedback();
