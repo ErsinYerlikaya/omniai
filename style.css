@@ -510,7 +510,7 @@ header {
 .hero-home {
   justify-content: center;
   align-items: center;
-  background-image: url("test2.png");
+  background-image: url("images/test2.png");
   text-align: center;
 }
 
@@ -518,7 +518,7 @@ header {
 .hero-subpage {
   justify-content: flex-start;
   align-items: flex-end;
-  background-image: url("Header3.png"); /* auf Wunsch pro Seite änderbar */
+  background-image: url("images/Header3.png"); /* auf Wunsch pro Seite änderbar */
   text-align: left;
 }
 
@@ -866,4 +866,80 @@ body.popup-active {
   .project-box.open .project-details {
     max-height: unset;
   }
+}
+
+
+@media (max-width: 768px) {
+  .project-detail-box {
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .project-detail-box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project-text {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .project-title {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-box img {
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  .project-box {
+    margin: 0 auto;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 10px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text,
+  .text-block,
+  .project-text {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .project-title {
+    font-size: 0.9rem;
+  }
+
+  .project-box img {
+    height: auto;
+    max-height: 150px;
+  }
+
+  .toggle-icon {
+    font-size: 1.2rem;
+  }
+
+  .project-detail-box {
+    padding: 1rem;
+  }
+}
+
+/* Sanfte Einblendung für Projekt-Details */
+.project-details {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.project-box.open .project-details {
+  display: block;
 }
