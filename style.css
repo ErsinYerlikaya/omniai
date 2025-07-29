@@ -978,10 +978,15 @@ body.popup-active {
 
 
 @media (max-width: 768px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .project-overlay {
     align-items: flex-start !important;
     justify-content: flex-start !important;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
     overflow-y: auto !important;
   }
 
@@ -1003,8 +1008,8 @@ body.popup-active {
     max-width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
-    border-radius: 10px;
     margin-bottom: 1rem;
+    border-radius: 10px;
   }
 
   .project-text {
@@ -1013,22 +1018,14 @@ body.popup-active {
   }
 
   .project-detail-box table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
+    width: 100% !important;
+    overflow-x: auto !important;
+    display: block !important;
   }
 
   .project-detail-box table th,
   .project-detail-box table td {
-    white-space: nowrap;
-  }
-
-  .project-box.open {
-    position: static !important;
-    transform: none !important;
-    width: 100% !important;
-    max-height: none !important;
-    padding: 1rem !important;
+    white-space: normal !important;
   }
 
   body.popup-active {
