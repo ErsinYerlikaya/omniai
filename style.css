@@ -975,3 +975,63 @@ body.popup-active {
     height: auto;
   }
 }
+
+
+@media (max-width: 768px) {
+  .project-overlay {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+  }
+
+  .project-detail-box {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 1rem !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  .project-detail-box img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .project-text {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .project-detail-box table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .project-detail-box table th,
+  .project-detail-box table td {
+    white-space: nowrap;
+  }
+
+  .project-box.open {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-height: none !important;
+    padding: 1rem !important;
+  }
+
+  body.popup-active {
+    overflow: auto !important;
+  }
+}
