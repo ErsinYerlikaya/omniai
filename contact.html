@@ -108,7 +108,7 @@
 
     <section class="section-two">
       <h1 style="text-align: center; color: #2b85d3;">Kontaktformular</h1>
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" action="https://formspree.io/f/meokpgkn" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
@@ -121,6 +121,14 @@
           <label for="message">Ihre Nachricht</label>
           <textarea id="message" name="message" rows="6" required></textarea>
         </div>
+
+        <!-- Anti-Spam-Feld -->
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- ✅ Hier ist das neue Feld für Weiterleitung -->
+        <input type="hidden" name="_next" value="danke.html">
+
         <button type="submit">Nachricht senden</button>
       </form>
     </section>

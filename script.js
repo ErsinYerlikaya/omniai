@@ -110,14 +110,6 @@ function setupScrollToTop() {
   });
 }
 
-// Dark Mode zwischen 22:00 und 07:00 aktivieren
-//function applyDarkMode() {
-//  const hour = new Date().getHours();
-//  if (hour >= 5 || hour < 7) {
-//    document.documentElement.classList.add("dark-mode");
-//    document.body.classList.add("dark-mode");
-//  }
-//}
 
 document.addEventListener("DOMContentLoaded", () => {
   updateFeedback();
