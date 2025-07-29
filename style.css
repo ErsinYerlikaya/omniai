@@ -13,12 +13,6 @@ body {
 }
 
 
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
 
 /* === Header & Navigation === */
 header {
@@ -198,7 +192,7 @@ a:hover {
 
 /* === Alternative Hero Section für Unterseiten === */
 .hero-section.alt-header {
-  background-image: url("Header2.png");
+  background-image: url("test.png");
 }
 .hero-section,
 .hero-section .hero-text-block,
@@ -956,4 +950,28 @@ body.popup-active {
   h1 { font-size: 1.6rem; }
   h2 { font-size: 1.4rem; }
   h3 { font-size: 1.2rem; }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .content-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .news-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
