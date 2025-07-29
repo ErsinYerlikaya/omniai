@@ -1111,3 +1111,32 @@ body.services-page .project-box.open .toggle-icon {
     padding: 1.5rem;
   }
 }
+
+/* === Mobile Styling für Services & Projects === */
+@media (max-width: 768px) {
+  .projects-grid {
+    padding: 0 1rem;
+  }
+
+  .project-box {
+    margin: 0 auto;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-header img {
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.05rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .project-details {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+}
