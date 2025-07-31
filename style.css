@@ -591,7 +591,7 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 750px;
+  height: 500px;
   display: flex;
   color: white;
   padding: 4rem 2rem;
@@ -637,17 +637,18 @@ a:hover {
 
 /* Responsive für kleinere Bildschirme */
 @media (max-width: 768px) {
-  .hero-section2 {
-    height: auto;
-    padding: 3rem 1rem;
-    align-items: center;
+  .hero-section {
+    height: 300px; /* oder 400px – je nach Wunsch */
+    padding: 2rem 1rem;
+    align-items: flex-end; /* wie in Desktop */
+    justify-content: flex-start;
   }
 
-  .hero-text-left h1 {
-    font-size: 1.8rem;
+  .hero-text-block h1 {
+    font-size: 1.6rem;
   }
 
-  .hero-text-left p {
+  .hero-text-block p {
     font-size: 1rem;
   }
 }
@@ -1138,5 +1139,55 @@ body.services-page .project-box.open .toggle-icon {
   .project-details {
     font-size: 0.95rem;
     padding: 1rem;
+  }
+}
+
+/* === MOBILE FIX: Noch kompakterer Abstand zwischen Bild und Text === */
+@media (max-width: 768px) {
+  .projects-grid {
+    padding: 0 0.5rem;
+  }
+
+  .project-box {
+    margin: 0.5rem auto;
+    padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-header {
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-header img {
+    height: 140px;
+    width: 100%;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .project-title {
+    display: none;
+  }
+
+  .project-details {
+    padding-top: 0.3rem;
+    margin-top: 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .project-details h3 {
+    margin: 0.3rem 0 0.2rem;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .project-details p {
+    margin: 0.3rem 0;
   }
 }

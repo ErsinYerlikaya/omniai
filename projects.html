@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Omni AI Solutions</title>
+  <title>Projects - Omni AI Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
     </nav>
   </div>
 </header>
-<section class="hero-section hero-subpage" style="background-image: url('images/test.png');">
+<section class="hero-section hero-subpage" style="background-image: url('images/Brain.jpeg');">
   <div class="hero-text-block">
     <h1>Projects</h1>
     <p>Here are some of our projects to get an impression</p>
@@ -38,11 +38,10 @@
 </section>
 
 <section class="intro-text">
-  <h1>WCost-Efficiency & High-Productivity Through AI & Technology</h1>
+  <h1>Projects</h1>
   <p>
-    We drive transformation through compliant and secure AI, tailored software, and smart automation, helping businesses
-    and authorities to enhance efficiency, reduce costs, and grow.
-    Explore the possibilities with us and take the first step toward a smarter future.
+    Explore a selection of real-world projects we've delivered — from fast AI prototypes to scalable enterprise
+    solutions. Each case showcases how we turn innovation into impact.
   </p>
 </section>
 
@@ -868,26 +867,7 @@
     </div>
 
   </div>
-  <script>
-    let currentOpen = null;
 
-    function showOverlay(index) {
-      document.getElementById("overlay").classList.add("open");
-      if (currentOpen !== null) {
-        document.getElementById("detail-" + currentOpen).style.display = "none";
-      }
-      document.getElementById("detail-" + index).style.display = "flex";
-      currentOpen = index;
-    }
-
-    function closeOverlay() {
-      if (currentOpen !== null) {
-        document.getElementById("detail-" + currentOpen).style.display = "none";
-        document.getElementById("overlay").classList.remove("open");
-        currentOpen = null;
-      }
-    }
-  </script>
 
 
   <footer class="site-footer">
@@ -912,6 +892,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    let currentOpen = null;
+
+    function showOverlay(index) {
+      document.getElementById("overlay").classList.add("open");
+      if (currentOpen !== null) {
+        document.getElementById("detail-" + currentOpen).style.display = "none";
+      }
+      document.getElementById("detail-" + index).style.display = "flex";
+      currentOpen = index;
+    }
+
+    function closeOverlay() {
+      if (currentOpen !== null) {
+        document.getElementById("detail-" + currentOpen).style.display = "none";
+        document.getElementById("overlay").classList.remove("open");
+        currentOpen = null;
+      }
+    }
+  </script>
 </body>
 
 </html>
