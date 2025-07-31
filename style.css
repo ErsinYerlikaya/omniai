@@ -638,9 +638,9 @@ a:hover {
 /* Responsive für kleinere Bildschirme */
 @media (max-width: 768px) {
   .hero-section {
-    height: 300px; /* oder 400px – je nach Wunsch */
+    height: 150px; 
     padding: 2rem 1rem;
-    align-items: flex-end; /* wie in Desktop */
+    align-items: flex-end; 
     justify-content: flex-start;
   }
 
